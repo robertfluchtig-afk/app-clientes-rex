@@ -19,7 +19,7 @@ if st.button("Consultar Estado"):
     if codigo_vasallo:
         try:
             # Leemos la pestaña exacta "Hoja 1"
-            df = conn.read(worksheet="Hoja 1")
+            df = conn.read(ttl="0") 
             df = df.dropna(subset=['Codigo'])
             
             # Buscamos al cliente
